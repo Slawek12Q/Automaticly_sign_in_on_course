@@ -17,4 +17,15 @@ loginField.send_keys(login)
 passwordField.send_keys(password)
 passwordField.submit()
 
+forStudentButton = browser.find_element_by_css_selector("div#layout-c12-t > div:nth-of-type(2) > div > nav > ul > li:nth-of-type(4) > a")
+forStudentButton.click()
+
+basketButton = browser.find_element_by_css_selector('div#layout-c21 > nav > ul > li:nth-of-type(3) > ul > li:nth-of-type(2) > a')
+basketButton.click()
+
+isFreePlace = browser.find_element_by_css_selector('div#layout-c22a > div > table:nth-of-type(3) > tbody > tr > td:nth-of-type(2) > span > span')
+message = isFreePlace.text()
+
+print(message)
+
 
